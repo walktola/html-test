@@ -30,7 +30,10 @@ var out="";
 			} 
 		} 
 
-for(var i=0;i<q.length;i++)out+=q[i];
+for(var i=0;i<q.length;i++){
+	out+=q[i];
+	console.log(out);
+}
 out+="<br>";
 backtrack();
 from_backtrack=true;
