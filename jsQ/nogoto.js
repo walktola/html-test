@@ -44,7 +44,7 @@ while(notEnd){
 
 }
 var canvas=document.getElementById('area');
-var area=canvas.getContex("2d");
+var area=canvas.getContext("2d");
 area.filStyle ="#FF0000";
 area.fillRect(0,0,50,50);
 function ok(col){ 
