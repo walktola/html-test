@@ -34,8 +34,10 @@ for(var i=0;i<q.length;i++)out+=q[i];
 out+="<br>";
 backtrack();
 from_backtrack=true;
+var node = document.createElement("LI"); 
+var textnode = document.createTextNode(out);
 
-document.getElementById("body").appendChild(out);
+document.getElementById("body").appendChild(node);
 
 }
 function ok(col){ 
