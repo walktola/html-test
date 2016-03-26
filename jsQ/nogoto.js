@@ -37,7 +37,7 @@ from_backtrack=true;
 document.body.insertAdjacentHTML( 'afterbegin', out );
 }
 function ok(col){ 
- for(int i=0; i<col; i++){
+ for(var i=0; i<col; i++){
  	if(q[col]==q[i] || (col-i)==Math.abs(q[col]-q[i])) return false; 
  }
  return true; 
