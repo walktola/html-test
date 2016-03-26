@@ -7,42 +7,46 @@ var c=0;
 var notEnd=true;
 var from_backtrack=false;
 while(notEnd){ 
-var out="";
-		while(c<8){ 
-			if(!from_backtrack) {
-				c++;
-				if(c==8) break;
-				q[c]=-1;
+	var out="";
+	while(c<8){ 
+		if(!from_backtrack) {
+			c++;
+			if(c==8) break;
+			q[c]=-1;
+		}
+		from_backtrack=false; 
+		while(q[c]<8){ 
+			q[c]++;
+			if(q[c]==8){
+				backtrack();
+				from_backtrack=true;
 			}
-			from_backtrack=false; 
-			while(q[c]<8){ 
-				q[c]++;
-				if(q[c]==8){
-					backtrack();
-					from_backtrack=true;
-				}
-				else{
-					for (var i=0;i<c;i++){
-						if(ok(c)) {break;} 
-					} 
-				}
-			 if(ok(c)) {break;}
-			} 
+			else{
+				for (var i=0;i<c;i++){
+					if(ok(c)) {break;} 
+				} 
+			}
+		 if(ok(c)) {break;}
 		} 
+	} 
 
-for(var i=0;i<q.length;i++){
-	out+=q[i];
-	console.log(out);
+	for(var i=0;i<q.length;i++){
+		out+=q[i];
+		console.log(out);
+	}
+	backtrack();
+	from_backtrack=true;
+	var node = document.createElement("p"); 
+	var textnode = document.createTextNode(out);
+	node.appendChild(textnode);
+
+	document.getElementById("place").appendChild(node);
+
 }
-backtrack();
-from_backtrack=true;
-var node = document.createElement("p"); 
-var textnode = document.createTextNode(out);
-node.appendChild(textnode);
-
-document.getElementById("place").appendChild(node);
-
-}
+var canvas=document.getElementById('area');
+var area=canvas.getContex("2d");
+area.filStyle ="#FF0000";
+area.fillRect(0,0,50,50);
 function ok(col){ 
  for(var i=0; i<col; i++){
  	if(q[col]==q[i] || (col-i)==Math.abs(q[col]-q[i])) return false; 
