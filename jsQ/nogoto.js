@@ -39,6 +39,7 @@ backtrack();
 from_backtrack=true;
 var node = document.createElement("p"); 
 var textnode = document.createTextNode(out);
+var node.appendChild(textnode);
 
 document.getElementById("place").appendChild(node);
 
