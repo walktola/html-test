@@ -34,7 +34,9 @@ for(var i=0;i<q.length;i++)out+=q[i];
 out+="<br>";
 backtrack();
 from_backtrack=true;
-document.body.insertAdjacentHTML( 'afterbegin', out );
+
+document.getElementById("body").appendChild(out);
+
 }
 function ok(col){ 
  for(var i=0; i<col; i++){
