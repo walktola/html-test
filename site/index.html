@@ -7,13 +7,11 @@
 
 <h1>Hello boom!</h1>
   <script>
-    var link = document.querySelector('link[rel="import"]');
-    var content = link.import;
-
-    // Grab DOM from warning.html's document.
-    var el = content.querySelector('.head');
-
-    document.body.appendChild(el.cloneNode(true));
+    
+    var link = document.querySelector('link[rel=import]');
+    var content = link.import.querySelector('.head');
+    document.body.appendChild(document.importNode(content, true));
+  
   </script>
 </body>
 </html>
