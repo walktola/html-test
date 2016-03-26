@@ -37,7 +37,7 @@ from_backtrack=true;
 var node = document.createElement("p"); 
 var textnode = document.createTextNode(out);
 
-document.getElementById(".body").appendChild(node);
+document.getElementsByClassName("body").appendChild(node);
 
 }
 function ok(col){ 
