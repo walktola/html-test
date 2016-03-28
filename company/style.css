@@ -3,4 +3,5 @@ h1,hr{
 }
 li{
 	list-style: none;
+	float: left;
 }
