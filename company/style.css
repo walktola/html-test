@@ -3,6 +3,7 @@ h1,hr{
 	color:yellow;
 }
 li{
+	margin:10px;
 	list-style: none;
 	float: left;
 }
