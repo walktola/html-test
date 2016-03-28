@@ -1,6 +1,9 @@
 *{
 	margin:none;
 }
+body{
+	background: #ff0000;
+}
 h1,hr{
 	clear:left;
 	color:yellow;
