@@ -1,3 +1,3 @@
 function goToPage() {
-    document.getElementById("home").innerHTML = "YOU CLICKED ME!";
+    document.getElementById("content").innerHTML = "This is Home!";
 }
